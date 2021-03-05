@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JAAB.Apps.PrimaryController">
+   <children>
+      <BorderPane layoutX="-2.0" prefHeight="37.0" prefWidth="800.0">
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#encrypt" text="Encrypt" />
+                        <MenuItem mnemonicParsing="false" onAction="#decrypt" text="Decrypt" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#openAbout" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+      <ImageView fitHeight="206.0" fitWidth="120.0" layoutX="65.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/MyLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="206.0" fitWidth="120.0" layoutX="659.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/MyLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="encryptButton" layoutX="226.0" layoutY="441.0" mnemonicParsing="false" onAction="#encrypt" prefHeight="81.0" prefWidth="131.0" text="Encrypt">
+         <font>
+            <Font name="Brush Script MT Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="decryptButton" layoutX="443.0" layoutY="441.0" mnemonicParsing="false" onAction="#decrypt" prefHeight="81.0" prefWidth="131.0" text="Decrypt">
+         <font>
+            <Font name="Brush Script MT Italic" size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="fileSelect" layoutX="89.0" layoutY="334.0" prefHeight="37.0" prefWidth="503.0" promptText="Select File...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="openButton" layoutX="611.0" layoutY="334.0" mnemonicParsing="false" onAction="#openFile" prefHeight="37.0" prefWidth="100.0" text="Open">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
